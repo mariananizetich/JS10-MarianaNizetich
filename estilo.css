@@ -5,3 +5,6 @@ a:hover {
 .nav-item a:hover {
     color: green;
 }
+.container {
+    display: flex;
+}
