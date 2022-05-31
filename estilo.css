@@ -18,3 +18,8 @@ footer {
 .facebook {
     padding: 10px;
 }
+@media (max-width:768px) {
+    .index {
+        flex-direction: column;
+    }
+}
