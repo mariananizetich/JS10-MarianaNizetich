@@ -5,6 +5,16 @@ a:hover {
 .nav-item a:hover {
     color: green;
 }
-.container {
+footer {
     display: flex;
+    justify-content: center;
+}
+.ig {
+    padding: 5px;
+}
+.tw {
+    padding: 10px;
+}
+.facebook {
+    padding: 10px;
 }
