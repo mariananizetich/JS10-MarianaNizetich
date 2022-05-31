@@ -1,0 +1,7 @@
+a:hover {
+    background-color: white;
+}
+
+.nav-item a:hover {
+    color: green;
+}
