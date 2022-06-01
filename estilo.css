@@ -1,9 +1,13 @@
 a:hover {
     background-color: white;
+    transform: scale(1.2, 1.2);
+    transition: all 1s;
 }
 
 .nav-item a:hover {
     color: green;
+    transform: scale(1.2, 1.2);
+    transition: all 1s;
 }
 /*Main*/
 main {
@@ -13,10 +17,16 @@ main {
 .titulo {
     text-align: center;
 }
+p {
+    text-align: justify;
+}
+
 /*Footer*/
 footer {
     display: flex;
     justify-content: center;
+    padding: 5px;
+    background-color: whitesmoke;
 }
 .ig {
     padding: 5px;
@@ -27,6 +37,11 @@ footer {
 .facebook {
     padding: 10px;
 }
+footer a:hover {
+    transform: scale(1.2, 1.2);
+    transition: all 1s;
+}
+
 @media (max-width:768px) {
     .index {
         flex-direction: column;
