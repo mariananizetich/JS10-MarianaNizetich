@@ -8,6 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!--Mi hoja de estilos-->
     <link rel="stylesheet" href="./estilo.css">
+    <!--Animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
     <title>Trelew</title>
 </head>
 <body>
@@ -44,19 +48,20 @@
     <!--Cuerpo del Index-->
     <main>
     <div class="row p-5">
-      <div class="index col-sm-12 col-md-12 p-3 d-flex align-items-center">
+      <div class="index col-sm-12 col-md-12 p-3 d-flex align-items-center animate__animated animate__fadeInLeft">
         <div class="flex-shrink-0">
           <img src="./multimedia/Foto actual Glorieta.png" width="350px" alt="Glorieta Plaza Independencia de Trelew">
         </div>
         <div class="flex-grow-1 ms-3">
+          <!--Primera sección-->
           <h2>Trelew</h2> 
           es una ciudad argentina del valle inferior del río Chubut, en el departamento Rawson, en el noreste de la provincia del Chubut en la Patagonia argentina. Se encuentra a 1451 km de Buenos Aires y a 17 km de Rawson, la capital provincial.Se comenzó a formar en 1886 cuando se sancionó la Ley n.º 1539 el 20 de octubre de ese año (fecha que se toma como el aniversario de la ciudad), bajo el impulso de la inmigración galesa de fines de siglo XIX que colaboró con el tendido del Ferrocarril Central del Chubut.
           Además, la ciudad es la más grande y poblada del valle inferior del río Chubut con más de 106 662 habitantes.
         </div>
       </div>
-      <div class="col-sm-12 col-md-12 p-3">
+      <div class="col-sm-12 col-md-12 p-3 animate__animated animate__fadeInLeft">
       <h3>Cómo llegar</h3>
-      
+      <!--Segunda sección-->
         <h5>En coche</h5>
         <p>
         La vía principal de acceso es la Ruta Nacional 3 y la Ruta Nacional 25. Actualmente, ambos acceos se están convirtiendo en autovías (Ruta 3: Autovía Puerto Madryn-Trelew y Ruta 25: Autovía Gaiman-Trelew).
@@ -72,7 +77,8 @@
           Lleva su nombre en homenaje al Vicealmirante Marcos Antonio Zar. La terminal para pasajeros del Aeropuerto está concesionada a la empresa London Supply. Las aerolíneas que operan son Aerolíneas Argentinas, Flybondi y LADE.
         </p>
       </div>
-      <div class="col-sm-3 col-md-6 p-3">
+      <div class="col-sm-3 col-md-6 p-3 animate__animated animate__fadeInLeft">
+        <!--Tercera sección-->
       <h3>Cultura</h3>
       <p>
         En Trelew se realiza anualmente el Eisteddfod, a fines de octubre, un festival tradicional que recibe invitados de todo el país y de la lejana Gales, y que constituye una expresión cultural única de la cultura galesa en Sudamérica.
@@ -80,13 +86,15 @@
         En el Aeropuerto Viejo (al norte de la ciudad), se encuentra el Centro Cultural Para la Memoria, con datos principalmente de la Masacre de Trelew y de la última dictadura militar.
       </p>
       </div>
-      <div class="col-sm-3 col-md-6 p-3">
+      <div class="col-sm-3 col-md-6 p-3 animate__animated animate__fadeInLeft">
+        <!--Cuarta sección-->
         <h3>Clima</h3>
         <p>
           El clima es desértico, con precipitaciones muy escasas, alta luminosidad y evaporación, marcadas amplitudes térmicas y anuales. Las precipitaciones pluviales rara vez superan 200 mm anuales y su distribución a lo largo del año no permite definir a ninguna estación como típicamente lluviosa. La temperatura máxima oscila en 40 grados centígrados y la mínima en 10 grados bajo cero.
         </p>
         </div>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <!--Pequeña galería de fotos-->
+    <div id="carouselExampleCaptions" class="carousel slide animate__animated animate__fadeInLeft" data-bs-ride="false">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -127,7 +135,13 @@
         <a href="https://twitter.com/ciudadtrelew" a target="_blank"><img src="./Logos/Twitter.png" alt="Twitter" class="tw"></a>
     
         <a href="https://www.facebook.com/TrelewTuristico/" a target="_blank"><img src="./Logos/Facebook.png" alt="Facebook" class="facebook"></a>
-    </footer>  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+    </footer>
+    <!--Script Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!--Script animaciones-->
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
 </body>
 </html>
