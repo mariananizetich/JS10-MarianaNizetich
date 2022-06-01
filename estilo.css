@@ -5,6 +5,11 @@ a:hover {
 .nav-item a:hover {
     color: green;
 }
+/*Título*/
+.titulo {
+    text-align: center;
+}
+/*Footer*/
 footer {
     display: flex;
     justify-content: center;
