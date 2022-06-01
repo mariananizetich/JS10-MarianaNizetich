@@ -13,6 +13,8 @@ a:hover {
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+
 /*Main*/
 main {
     background-color: rgb(212, 245, 212);
@@ -23,6 +25,9 @@ main {
 }
 p {
     text-align: justify;
+}
+h2 h3 h5 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*Footer*/
@@ -50,4 +55,9 @@ footer a:hover {
     .index {
         flex-direction:column-reverse;
     }
+}
+/*Hoteles*/
+.hoteles {
+    text-align: center;
+    padding: 3%;
 }
