@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /*Animaciones*/
 a:hover {
     background-color: white;
@@ -10,10 +20,10 @@ a:hover {
     transform: scale(1.2, 1.2);
     transition: all 1s;
 }
-body {
-    font-family: 'Montserrat', sans-serif;
+footer a:hover {
+    transform: scale(1.2, 1.2);
+    transition: all 1s;
 }
-
 
 /*Main*/
 main {
@@ -46,10 +56,7 @@ footer {
 .facebook {
     padding: 10px;
 }
-footer a:hover {
-    transform: scale(1.2, 1.2);
-    transition: all 1s;
-}
+
 
 @media (max-width:768px) {
     .index {
