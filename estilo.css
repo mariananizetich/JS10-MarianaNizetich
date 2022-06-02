@@ -61,3 +61,38 @@ footer a:hover {
     text-align: center;
     padding: 3%;
 }
+.card-link {
+    color: darkgreen;
+}
+
+
+/*Contacto*/
+.contacto {
+    text-align: center;
+}
+.lista {
+    list-style-type: none;
+    
+}
+.lista li {
+    margin: 0.7rem;
+    padding: 0.7rem;
+}
+.lista a {
+    text-decoration: none;
+    color: black;
+    
+    
+}
+
+.lista li:hover {
+    
+    transform: scale(1.2, 1.2);
+    transition: all 2s;   
+}
+.lista a:hover {
+    color: green;
+    transform: scale(1.2, 1.2);
+    transition: all 2s;
+    background-color: whitesmoke;
+}
