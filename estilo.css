@@ -27,7 +27,6 @@ p {
     text-align: justify;
 }
 
-
 /*Footer*/
 footer {
     display: flex;
@@ -50,6 +49,7 @@ footer {
     .index {
         flex-direction:column-reverse;
     }
+    
     
 }
 /*Hoteles*/
