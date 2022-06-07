@@ -1,6 +1,6 @@
 /*Animaciones*/
 a:hover {
-    background-color: white;
+    background:none;
     transform: scale(1.2, 1.2);
     transition: all 1s;
 }
@@ -15,14 +15,17 @@ body {
 }
 
 
+
 /*Main*/
 main {
     background-color: rgb(212, 245, 212);
     color: black;
 }
 .titulo {
-    text-align: center;
+    text-align: justify;
+    margin: 5%;
 }
+
 p {
     text-align: justify;
 }
