@@ -1,20 +1,12 @@
-/*Animaciones*/
-a:hover {
-    background:none;
-    transform: scale(1.2, 1.2);
-    transition: all 1s;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav-item a:hover {
-    color: green;
-    transform: scale(1.2, 1.2);
-    transition: all 1s;
-}
 body {
     font-family: 'Montserrat', sans-serif;
 }
-
-
 
 /*Main*/
 main {
@@ -29,6 +21,60 @@ main {
 p {
     text-align: justify;
 }
+
+/*Hoteles*/
+.hoteles {
+    text-align: center;
+    padding: 3%;
+}
+.card-link {
+    color: darkgreen;
+}
+
+
+
+/*Contacto*/
+.contacto {
+    text-align: center;
+}
+.lista {
+    text-align: center;
+    list-style-type: none;
+    
+}
+.lista li {
+    margin: 0.7rem;
+    padding: 0.7rem;
+}
+.lista a {
+    text-decoration: none;
+    color: black;   
+}
+
+/*Animaciones*/
+a:hover {
+    background:none;
+    transform: scale(1.2, 1.2);
+    transition: all 1s;
+}
+
+.nav-item a:hover {
+    color: green;
+    transform: scale(1.2, 1.2);
+    transition: all 1s;
+}
+.lista li:hover {
+    
+    transform: scale(1.2, 1.2);
+    transition: all 2s;   
+}
+.lista a:hover {
+    color: green;
+    transform: scale(1.2, 1.2);
+    transition: all 2s;
+    background-color: whitesmoke;
+}
+
 
 /*Footer*/
 footer {
@@ -51,48 +97,7 @@ footer {
 @media (max-width:768px) {
     .index {
         flex-direction:column-reverse;
-    }
-    
-    
-}
-/*Hoteles*/
-.hoteles {
-    text-align: center;
-    padding: 3%;
-}
-.card-link {
-    color: darkgreen;
+    }    
 }
 
 
-/*Contacto*/
-.contacto {
-    text-align: center;
-}
-.lista {
-    text-align: center;
-    list-style-type: none;
-    
-}
-.lista li {
-    margin: 0.7rem;
-    padding: 0.7rem;
-}
-.lista a {
-    text-decoration: none;
-    color: black;
-    
-    
-}
-
-.lista li:hover {
-    
-    transform: scale(1.2, 1.2);
-    transition: all 2s;   
-}
-.lista a:hover {
-    color: green;
-    transform: scale(1.2, 1.2);
-    transition: all 2s;
-    background-color: whitesmoke;
-}
