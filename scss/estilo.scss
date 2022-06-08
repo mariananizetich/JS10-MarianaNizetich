@@ -1,0 +1,92 @@
+/*Main*/
+/*Hoteles*/
+/*Contacto*/
+/*Animaciones*/
+/*Footer*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+main {
+	background-color: rgb(212, 245, 212);
+	color: black;
+}
+.titulo {
+	text-align: justify;
+	margin: 5%;
+}
+p {
+	text-align: justify;
+}
+.hoteles {
+	text-align: center;
+	padding: 3%;
+}
+.card-link {
+	color: darkgreen;
+}
+.contacto {
+	text-align: center;
+}
+.lista {
+	text-align: center;
+	list-style-type: none;
+	li {
+		margin: 0.7rem;
+		padding: 0.7rem;
+		&:hover {
+			transform: scale(1.2, 1.2);
+			transition: all 2s;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: black;
+		&:hover {
+			color: green;
+			transform: scale(1.2, 1.2);
+			transition: all 2s;
+			background-color: whitesmoke;
+		}
+	}
+}
+a {
+	&:hover {
+		background: none;
+		transform: scale(1.2, 1.2);
+		transition: all 1s;
+	}
+}
+.nav-item {
+	a {
+		&:hover {
+			color: green;
+			transform: scale(1.2, 1.2);
+			transition: all 1s;
+		}
+	}
+}
+footer {
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+	background-color: whitesmoke;
+}
+.ig {
+	padding: 5px;
+}
+.tw {
+	padding: 10px;
+}
+.facebook {
+	padding: 10px;
+}
+@media (max-width:768px) {
+	.index {
+		flex-direction: column-reverse;
+	}
+}
