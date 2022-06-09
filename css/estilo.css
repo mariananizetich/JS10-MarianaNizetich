@@ -1,0 +1,73 @@
+header .nav-item a:hover {
+  color: green;
+  transform: scale(1.2, 1.2);
+  transition: all 1s; }
+
+@media (max-width: 768px) {
+  .index {
+    flex-direction: column-reverse; } }
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: whitesmoke; }
+  footer .ig {
+    padding: 5px; }
+  footer .tw {
+    padding: 10px; }
+  footer .facebook {
+    padding: 10px; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif; }
+  body p {
+    text-align: justify; }
+
+a:hover {
+  background: none;
+  transform: scale(1.2, 1.2);
+  transition: all 1s; }
+
+main {
+  background-color: #d4f5d4;
+  color: black; }
+  main .titulo {
+    text-align: justify;
+    margin: 5%; }
+
+.hoteles {
+  text-align: center;
+  padding: 3%; }
+
+.card-link {
+  color: darkgreen;
+  text-decoration: none; }
+  .card-link:hover {
+    color: yellowgreen; }
+
+.contacto {
+  text-align: center; }
+
+.lista {
+  text-align: center;
+  list-style-type: none; }
+  .lista li {
+    margin: 0.7rem;
+    padding: 0.7rem; }
+    .lista li:hover {
+      transform: scale(1.2, 1.2);
+      transition: all 2s; }
+  .lista a {
+    text-decoration: none;
+    color: black; }
+    .lista a:hover {
+      color: green;
+      transform: scale(1.2, 1.2);
+      transition: all 2s;
+      background-color: whitesmoke; }
