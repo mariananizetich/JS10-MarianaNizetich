@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 header .nav-item a:hover {
   color: green;
   transform: scale(1.2, 1.2);
@@ -18,11 +23,6 @@ footer {
     padding: 10px; }
   footer .facebook {
     padding: 10px; }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
 
 body {
   font-family: 'Montserrat', sans-serif; }
@@ -50,24 +50,32 @@ main {
   text-decoration: none; }
   .card-link:hover {
     color: yellowgreen; }
+  .card-link .card-img-top {
+    width: 500px; }
 
 .contacto {
   text-align: center; }
 
-.lista {
+.lista, .diarios {
   text-align: center;
   list-style-type: none; }
-  .lista li {
+  .lista li, .diarios li {
     margin: 0.7rem;
     padding: 0.7rem; }
-    .lista li:hover {
+    .lista li:hover, .diarios li:hover {
       transform: scale(1.2, 1.2);
       transition: all 2s; }
-  .lista a {
+  .lista a, .diarios a {
     text-decoration: none;
     color: black; }
-    .lista a:hover {
-      color: green;
+    .lista a:hover, .diarios a:hover {
+      color: yellowgreen;
       transform: scale(1.2, 1.2);
       transition: all 2s;
-      background-color: whitesmoke; }
+      background: none; }
+
+.diarios {
+  color: darkgray; }
+
+.redes {
+  text-align: center; }

@@ -1,8 +1,10 @@
+@import "variables";
+
 footer {
 	display: flex;
 	justify-content: center;
 	padding: 5px;
-	background-color: whitesmoke;
+	background-color: $color-footer;
 
 .ig {
 	padding: 5px;
