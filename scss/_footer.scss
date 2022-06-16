@@ -1,8 +1,12 @@
+$color-fondo: #d4f5d4;
+$color-footer:whitesmoke;
+$color-animacion: yellowgreen;
+
 footer {
 	display: flex;
 	justify-content: center;
 	padding: 5px;
-	background-color: whitesmoke;
+	background-color: $color-footer;
 
 .ig {
 	padding: 5px;

@@ -1,12 +1,16 @@
+/*Imports*/
+@import "base";
 @import "header";
+@import "mixin";
 @import "mediaq";
 @import "footer";
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+/*Variables*/
+
+$color-fondo: #d4f5d4;
+$color-footer:whitesmoke;
+$color-animacion: yellowgreen;
+
 
 body {
 	font-family: 'Montserrat', sans-serif;
@@ -24,7 +28,7 @@ a {
 }
 
 main {
-	background-color: rgb(212, 245, 212);
+	background-color: $color-fondo;
 	color: black;
 
 .titulo {
@@ -41,13 +45,18 @@ main {
 	color: darkgreen;
     text-decoration: none;
     &:hover {
-        color: yellowgreen;
+        color: $color-animacion;
     }
+.card-img-top {
+	width: 500px;
+}
 }
 
 .contacto {
 	text-align: center;
 }
+
+
 
 .lista {
 	text-align: center;
@@ -56,21 +65,26 @@ main {
 		margin: 0.7rem;
 		padding: 0.7rem;
 		&:hover {
-			transform: scale(1.2, 1.2);
-			transition: all 2s;
+			@include animaciones;
 		}
 	}
 	a {
 		text-decoration: none;
 		color: black;
 		&:hover {
-			color: green;
-			transform: scale(1.2, 1.2);
-			transition: all 2s;
-			background-color: whitesmoke;
+			color: $color-animacion;
+			@include animaciones;
+			background:none;
 		}
 	}
 }
+.diarios {
+	@extend .lista;
+	color: darkgray;
+}
 
+.redes {
+	text-align: center;
+}
 
 
