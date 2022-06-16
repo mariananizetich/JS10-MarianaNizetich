@@ -1,10 +1,15 @@
-
+/*Imports*/
 @import "base";
 @import "header";
 @import "mixin";
 @import "mediaq";
 @import "footer";
-@import "variables";
+
+/*Variables*/
+
+$color-fondo: #d4f5d4;
+$color-footer:whitesmoke;
+$color-animacion: yellowgreen;
 
 
 body {
