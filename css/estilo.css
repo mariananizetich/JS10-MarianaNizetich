@@ -58,26 +58,23 @@ main {
 .contacto {
   text-align: center; }
 
-.lista, .diarios {
+.lista {
   text-align: center;
   list-style-type: none; }
-  .lista li, .diarios li {
+  .lista li {
     margin: 0.7rem;
     padding: 0.7rem; }
-    .lista li:hover, .diarios li:hover {
+    .lista li:hover {
       transform: scale(1.2, 1.2);
       transition: all 2s; }
-  .lista a, .diarios a {
+  .lista a {
     text-decoration: none;
     color: black; }
-    .lista a:hover, .diarios a:hover {
+    .lista a:hover {
       color: yellowgreen;
       transform: scale(1.2, 1.2);
       transition: all 2s;
       background: none; }
-
-.diarios {
-  color: darkgray; }
 
 .redes {
   text-align: center; }
