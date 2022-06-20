@@ -1,7 +1,7 @@
 {
   "name": "entrega",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tercera entrega del proyecto final. El tema elegido es mi ciudad natal, Trelew Chubut. Hago un breve resumen de la misma, contanto qué significa su nombre; cómo llegar; sus principales atracciones, etc.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
