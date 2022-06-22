@@ -1,6 +1,18 @@
+$color-animacion: yellowgreen;
+
 @media (max-width:768px) {
 	.index {
 		flex-direction: column-reverse;
 	}
+	header {
+		.nav-item {
+			a {
+				&:hover {
+					color: $color-animacion;
+					transform: none;
+				}
+			}
+		}
+		}
     
 }
