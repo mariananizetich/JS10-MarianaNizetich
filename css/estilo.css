@@ -6,12 +6,15 @@
 
 header .nav-item a:hover {
   color: green;
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
   transition: all 1s; }
 
 @media (max-width: 768px) {
   .index {
-    flex-direction: column-reverse; } }
+    flex-direction: column-reverse; }
+  header .nav-item a:hover {
+    color: yellowgreen;
+    transform: none; } }
 
 footer {
   display: flex;
