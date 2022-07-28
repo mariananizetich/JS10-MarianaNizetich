@@ -16,7 +16,7 @@ const excursionA = new Excursion ("Avistaje", 10500, 10)
 const excursionB = new Excursion ("Snorkel", 9000, 10)
 
 let listaExcursiones = [excursionA, excursionB]
-let nombreExcursiones = listarExcursiones () //una forma optima en linea 30
+ //una forma optima en linea 30
 let precios = [10500, 9000]
 let stocks = [10]
 
@@ -26,7 +26,8 @@ function listarExcursiones (){
     }
 }
  //una forma optima en linea 30
-//let nombreExcursiones = 
+//let nombreExcursiones = listarExcursiones () Al corregirlo, se me rompe todo el código. Por qué puede ser?
+let nombreExcursiones = listaExcursiones.map((producto) => producto.nombre)
 
 do {
     cantidadTotal = parseInt (prompt ("Cuántas excursiones distintas desea comprar?"))
@@ -53,11 +54,11 @@ function sumaStock(cantidad, stock, precio){
 for (let i = 0; i < cantidadTotal; i++) {
     let compra1 = prompt ("Ingrese la excursión que quiere comprar: \n" + nombreExcursiones.join("\n"))
     
-    if (compra1 == "Avistaje".toLowerCase ()) { //usar el metodo correspondiente para comparar correctamente ==> .toLowerCase()
+    if (compra1 == "Avistaje") { //usar el metodo correspondiente para comparar correctamente ==> .toLowerCase()
         let cantidad1 = parseInt (prompt ("Ingrese la cantidad de tickets de " + compra1 + " que desea comprar:"))        
         sumaStock (cantidad1, stock, precio1)        
     }
-    else if (compra1 == "Snorkel".toLowerCase ()) { //usar el metodo correspondiente para comparar correctamente ==> .toLowerCase()
+    else if (compra1 == "Snorkel") { //usar el metodo correspondiente para comparar correctamente ==> .toLowerCase()
         let cantidad1 = parseInt (prompt ("Ingrese la cantidad de tickets de " +compra1 + " que desea comprar:"))
         sumaStock (cantidad1, stock, precio2)
                 
