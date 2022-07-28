@@ -1,7 +1,6 @@
 let precio1 = 10500
 let precio2 = 9000
 let stock = 10
-
 let precioFinal = 0
 
 class Excursion {
@@ -56,11 +55,11 @@ for (let i = 0; i < cantidadTotal; i++) {
     
     if (compra1 == "Avistaje".toLowerCase()) { //usar el metodo correspondiente para comparar correctamente ==> .toLowerCase() Corregido.
         let cantidad1 = parseInt (prompt ("Ingrese la cantidad de tickets de " + compra1 + " que desea comprar:"))        
-        sumaStock (cantidad1, stock, precio1)        
+        sumaStock(cantidad1, stock, precio1)        
     }
     else if (compra1 == "Snorkel".toLowerCase()) { //usar el metodo correspondiente para comparar correctamente ==> .toLowerCase() Corregido.
         let cantidad1 = parseInt (prompt ("Ingrese la cantidad de tickets de " + compra1 + " que desea comprar:"))
-        sumaStock (cantidad1, stock, precio2)
+        sumaStock(cantidad1, stock, precio2)
         //que pasa si cantidad1 no es un numero??? INVESTIGAR Y AGREGAR CONDICIONAL 
         //intenté aplicar isNaN como en la cantidad de excursiones, pero no me salió. 
         //ya va a salir!!!
