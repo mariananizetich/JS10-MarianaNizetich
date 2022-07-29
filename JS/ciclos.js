@@ -1,39 +1,98 @@
-let precio1 = 10500
+//HOLA MARIANA!
+//EL HTML LO TENES MUY BIEN ORDENADO
+//HAGAMOS LO MISMO CON JS
+
+//esto no lo usas: borralo, guardalo en otro archivo o comentalo
+/* let precio1 = 10500
 let precio2 = 9000
 let stock = 10
-let precioFinal = 0
+let precioFinal = 0 */
 
+//1
+//creacion de mi producto de comercializacion
+//en tu caso son excursiones de trelew
+//las construimos con los siguientes datos:
+    //nombre
+    //precio
+    //stock??? las excursiones tienen stock? no seria capacidad?
+    //foto: no estaria bueno agregarle una foto?
+    //detalle: no estaria bueno agregarle un dealle de la excursion?
+    //duracion: no estaria bueno agregarle la duracion? horarios? cualquier otra cosa que quieras renderizar en HTML agregalo!
 class Excursion {
     constructor (nombre, precio, stock){
         this.nombre = nombre;
         this.precio = precio;
-        this.stock = stock;
+        this.stock = stock; //agregar las propiedades que creas necesarias para tu app
     }
 }
 
+//2
+//construyo los prodcutos y los uno en un array
 const excursionA = new Excursion ("Avistaje", 10500, 10)
-const excursionB = new Excursion ("Snorkel", 9000, 10)
-
-let listaExcursiones = [excursionA, excursionB]
-let nombreExcursiones = [] //una forma optima en linea 30
-let precios = [10500, 9000]
-let stocks = [10]
-
-function listarExcursiones (){
+const excursionB = new Excursion ("Snorkel", 9000, 10) //generar mas productos o excursiones
+let listaExcursiones = [excursionA,excursionB] //agregar productos
+let nombreExcursiones = [] //los vamos a agregar con una funcion de orden superior
+listaExcursiones.map( cadaElementoDelArray => nombreExcursiones.push(cadaElementoDelArray.nombre))
+console.log(nombreExcursiones) //verificamos en consola que esten cargados los productos
+//map es un bucle supermega inteligente, por cada elemento del array hace algo, en este caso el push de los nombres
+// let precios = [10500, 9000] //no lo usas
+// let stocks = [10] //no lo usas
+/* function listarExcursiones (){
     for (const excursion of listaExcursiones){
         nombreExcursiones.push(excursion.nombre)
     }
 }
-listarExcursiones () //una forma optima en linea 30
-//let nombreExcursiones = listarExcursiones () Cuando lo hago de esta manera, se me rompe el código, no sé qué estoy haciendo mal.
+listarExcursiones () //ESTO YA NO ES NECESARIO PORQUE SE USO FOREACH*/ 
 
+//3
+//le pido al usuario algo que inicia todo mi programa
+let cantidadTotal = 0 //la defino en 0
 do {
-    cantidadTotal = parseInt (prompt ("Cuántas excursiones distintas desea comprar?"))
+    cantidadTotal = parseInt (prompt ("Cuántas excursiones distintas desea comprar?")) //le reasigno un valor
 }
-while (isNaN(cantidadTotal)) //muy bien planteado!!! pero que pasa si ingreso un numero negativo???
-//como lo solucionarias?? 
-//Con un <0, pero tengo que agregar otro while, o se puede dentro del mismo?
+while (isNaN(cantidadTotal) || cantidadTotal<1) //muy bien planteado!!! pero que pasa si ingreso un numero negativo???
+//para eso agrego una condicion!
 
+
+//4
+//con la cantidad de compras que el usuario quiere comprar
+//ahora pregunto QUE QUIERE comprar?
+let excursion = "" //la defino vacia
+let excursionEncontrada = {} //va a contener la excursion que eligio el usuario
+let precioFinal = 0 //aca se van a sumar todos los packs que compre el usuario
+for (let i=1; i<=cantidadTotal; i++) { //por la cantidad de veces que el usuario ingresó
+    do { //necesito hacer
+        excursion = prompt ("Ingrese la excursión que quiere comprar: \n" + nombreExcursiones.join("\n")) //el pedido de la excursion
+        console.log(excursion) //verifico la entrada del usuario
+        //necesito hacerlo mientras el usuario no tipee un producto valido por eso uso la estructura del do-while
+        excursionEncontrada = listaExcursiones.filter(cadaElementoDelArray => cadaElementoDelArray.nombre.toLowerCase() === excursion.toLowerCase())
+        //filter es un bucle supermega inteligente, que guarda los elementos que coinciden con la igualdad
+        console.log(excursionEncontrada) //verificamos en consola el encontrado => es un array, necesito el primer y unico elemento encontrado en este caso
+        excursionEncontrada = excursionEncontrada[0] //reasigno con el objeto encontrado
+        console.log(excursionEncontrada)
+    }
+    while (!excursionEncontrada) //mientras NO encuentre una excursion, repite la pregunta
+    //ahora que me aseguré que el usuario escribió bien una excursion
+    //le tengo que preguntar al usuario CUANTOS QUIERE COMPRAR
+    //utilizo la estructura ya vista de do-while
+    //ya que tengo que preguntarle la cantidad mientras no ingrese un numero, positivo y que además sea menor que el stock/cupo
+    let cantidad = 0 //declaro la cantidad
+    do {
+        cantidad = parseInt (prompt ("Ingrese la cantidad de tickets de " + excursionEncontrada.nombre + " que desea comprar:")) //le reasigno valor
+    }
+    while (isNaN(cantidad) || cantidad<1 || cantidad>excursionEncontrada.stock)
+    //sabiendo la cantidad: realizo las cuentas correspondientes:
+    sumarProductos(cantidad,excursionEncontrada.precio) //le paso los valores a la funcion
+}
+
+function sumarProductos(cant,precio){
+    let subTotal = cant * precio
+    precioFinal += cant * precio
+    alert("El subTotal es: $" + subTotal + ". El precio total es: $" + precioFinal)
+}
+
+
+/* 
 function sumaPrecio(cantidad, precio){
     precioFinal += cantidad * precio
 
@@ -76,7 +135,7 @@ for (let i = 0; i < cantidadTotal; i++) {
 //MUY SIMILAR AL DO WHILE que armaste al principio (que no salga del bucle si no escribe un numero)
 
 alert ("Listo! El precio total de tu compra es de: $" + precioFinal + ". Que lo disfrutes!")
-
+ */
 /*for(let i = 0; i < cantidadTotal; i++){
 
     let compra1 = prompt("Ingrese la excursión que quiere comprar: \n" + nombreExcursiones.join("\n")).toLowerCase()
