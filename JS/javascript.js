@@ -23,3 +23,5 @@ function validarEnvio(e){
         
 }
 
+//los eventos interactuan con HTML, por ende esos console.log no corresponden:
+//tendrias que haber mostrado algo en el DOM utilizando los metodos que ya aprendimos (selectores/escuchadores)s
