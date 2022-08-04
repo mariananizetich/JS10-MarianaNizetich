@@ -1,94 +1,70 @@
-let precio1 = 10500
-let precio2 = 9000
-let stock = 10
-let precioFinal = 0
+    
+    const titulo = document.querySelector(".titulo")
+    titulo.setAttribute("title", "Excursiones en Península Valdés")
 
-class Excursion {
-    constructor (nombre, precio, stock){
-        this.nombre = nombre;
-        this.precio = precio;
-        this.stock = stock;
+    class Excursion {
+        constructor (nombre, precio, stock){
+            this.nombre = nombre;
+            this.precio = precio;
+            this.stock = stock; 
+        }
     }
-}
+    
+    const excursionA = new Excursion ("Avistaje", 10500, 10)
+    const excursionB = new Excursion ("Snorkel", 9000, 10)
 
-const excursionA = new Excursion ("Avistaje", 10500, 10)
-const excursionB = new Excursion ("Snorkel", 9000, 10)
+    
 
-let listaExcursiones = [excursionA, excursionB]
-let nombreExcursiones = [] //una forma optima en linea 30
-let precios = [10500, 9000]
-let stocks = [10]
+    let listaExcursiones = [excursionA,excursionB]
 
-function listarExcursiones (){
+    
+    let nombreExcursiones = [] 
+    listaExcursiones.map( cadaElementoDelArray => nombreExcursiones.push(cadaElementoDelArray.nombre))
+    console.log(nombreExcursiones) 
+
+
     for (const excursion of listaExcursiones){
-        nombreExcursiones.push(excursion.nombre)
+        let contenido = document.createElement("div")
+
+        contenido.innerHTML = `<h3> ${excursion.nombre}<h3/> <p>$ ${excursion.precio}</p>`
+
+        document.body.append(contenido)
     }
-}
-listarExcursiones () //una forma optima en linea 30
-//let nombreExcursiones = listarExcursiones () Cuando lo hago de esta manera, se me rompe el código, no sé qué estoy haciendo mal.
+     /*Comento el código hasta poder aplicarlo correctamente al html.
+    let cantidadTotal = 0 
+    
+    do {
+        cantidadTotal = parseInt (prompt ("Cuántas excursiones distintas desea comprar?")) //le reasigno un valor
+    }
+    while (isNaN(cantidadTotal) || cantidadTotal<1) 
 
-do {
-    cantidadTotal = parseInt (prompt ("Cuántas excursiones distintas desea comprar?"))
-}
-while (isNaN(cantidadTotal)) //muy bien planteado!!! pero que pasa si ingreso un numero negativo???
-//como lo solucionarias?? 
-//Con un <0, pero tengo que agregar otro while, o se puede dentro del mismo?
-
-function sumaPrecio(cantidad, precio){
-    precioFinal += cantidad * precio
-
-}
-
-function sumaStock(cantidad, stock, precio){
-    if(stock >= cantidad){
-        sumaPrecio(cantidad, precio)
-        alert("El precio total es de: $" + (cantidad * precio))
+    let excursion = "" //la defino vacia
+    let excursionEncontrada = {} 
+    
+    let precioFinal = 0 //aca se van a sumar todos los packs que compre el usuario
+    for (let i=1; i<=cantidadTotal; i++) { //por la cantidad de veces que el usuario ingresó
+        do { //necesito hacer
+            excursion = prompt ("Ingrese la excursión que quiere comprar: \n" + nombreExcursiones.join("\n")) //el pedido de la excursion
+            console.log(excursion) //verifico la entrada del usuario
+            //necesito hacerlo mientras el usuario no tipee un producto valido por eso uso la estructura del do-while
+            excursionEncontrada = listaExcursiones.filter(cadaElementoDelArray => cadaElementoDelArray.nombre.toLowerCase() === excursion.toLowerCase())
+            //filter es un bucle supermega inteligente, que guarda los elementos que coinciden con la igualdad
+            console.log(excursionEncontrada) //verificamos en consola el encontrado => es un array, necesito el primer y unico elemento encontrado en este caso
+            excursionEncontrada = excursionEncontrada[0] //reasigno con el objeto encontrado
+            console.log(excursionEncontrada)
+        }
+        while (!excursionEncontrada)
+        let cantidad = 0
+        do {
+            cantidad = parseInt (prompt ("Ingrese la cantidad de tickets de " + excursionEncontrada.nombre + " que desea comprar:")) 
+        }
+        while (isNaN(cantidad) || cantidad<1 || cantidad>excursionEncontrada.stock)
+        sumarProductos(cantidad,excursionEncontrada.precio)
     }
     
-    else{
-        alert("Error: Podés comprar hasta " + stock + " tickets por persona")
+    function sumarProductos(cant,precio){
+        let subTotal = cant * precio
+        precioFinal += cant * precio
+        alert("El subtotal es: $" + subTotal + ". El precio total es: $" + precioFinal)
     }
-}
-
-for (let i = 0; i < cantidadTotal; i++) {
-    let compra1 = prompt ("Ingrese la excursión que quiere comprar: \n" + nombreExcursiones.join("\n"))
-    
-    if (compra1 == "Avistaje".toLowerCase()) { //usar el metodo correspondiente para comparar correctamente ==> .toLowerCase() Corregido.
-        let cantidad1 = parseInt (prompt ("Ingrese la cantidad de tickets de " + compra1 + " que desea comprar:"))        
-        sumaStock(cantidad1, stock, precio1)        
-    }
-    else if (compra1 == "Snorkel".toLowerCase()) { //usar el metodo correspondiente para comparar correctamente ==> .toLowerCase() Corregido.
-        let cantidad1 = parseInt (prompt ("Ingrese la cantidad de tickets de " + compra1 + " que desea comprar:"))
-        sumaStock(cantidad1, stock, precio2)
-        //que pasa si cantidad1 no es un numero??? INVESTIGAR Y AGREGAR CONDICIONAL 
-        //intenté aplicar isNaN como en la cantidad de excursiones, pero no me salió. 
-        //ya va a salir!!!
-
-    } //EN QUE SE DIFERENCIAN LAS LINEAS 58 Y 59 DE LA 62 Y 63?
-    //NO SON CASI IGUALES? EN QUE SE DIFERENCIAN? QUE SE HACE EN JS PARA NO REPETIR CODIGO?
-    //CORREGIR ESTO PARA LA PRE-ENTREGA 
-    //En la línea 81 comento lo que intenté, pero al llamar a las excursiones en las funciones no me las toma: 
-    else {
-        alert("No disponemos de la exursión indicada.")
-    }
-}
-// No sé cómo hacer para que, si la cantidad de tickets ingresada no es correcta, vuelva a preguntar y se reanude el ciclo. Lo que he intentado hasta ahora no me ha salido. Además, en los casos donde se aplica el else, sigue saliendo el alert final, como si hubiese hecho la compra. Dónde me puedo fijar algún ejemplo?
-//MUY SIMILAR AL DO WHILE que armaste al principio (que no salga del bucle si no escribe un numero)
-
-alert ("Listo! El precio total de tu compra es de: $" + precioFinal + ". Que lo disfrutes!")
-
-/*for(let i = 0; i < cantidadTotal; i++){
-
-    let compra1 = prompt("Ingrese la excursión que quiere comprar: \n" + nombreExcursiones.join("\n")).toLowerCase()
-    let cantidad1 = prompt("Ingrese la cantidad de tickets de " + compra1 + " que desea comprar:")
-
-    if(compra1 == "Avistaje".toLowerCase()){
-        calculoStock(cantidad1, excursionA)
-    }
-    else if(compra1 == "Snorkel".toLowerCase()){
-        calculoStock(cantidad1, productoB)
-    }
-    else{
-        alert("No disponemos de la exursión indicada.")
-    }
-}*/
+    */
