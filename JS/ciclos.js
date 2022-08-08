@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             id: 1,
             nombre: "Avistaje",
-            img:
             precio: 10500,
             capacidad: 10
         },
