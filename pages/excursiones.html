@@ -55,18 +55,31 @@
     </header>
 
     <!--Contenido-->
-    <main class="p-4">
-      <div id="contenido" class="row" >
-        
-        <h2 class="titulo">Visitar Trelew | Excursiones en Península Valdés</h2>
+    <main class="p-4 container">
+      <div class="row">
+        <div class="col-sm 12 col-md-12 p-5">
+          <h2 class="titulo">Visitar Trelew | Excursiones en Península Valdés</h2>
+          <p><strong>Te ofrecemos las mejores excursiones en tu visita a nuestra ciudad:</strong></p>
+        </div>
+        <div class="col-sm-12  col-md-6 p-5" id="items">
 
-      
-         
-    
-    </div>
-    <script src="../JS/ciclos.js"></script>
+        </div>
+        <!--Aside-->
+        <div class="col-sm-12 col-md-6 p-5">
+          <h2 class="titulo">Tu compra</h2>
+          <ul id="carrito" class="list-group"></ul>
+          <hr>
+          <p class="text-right">Total de tu compra: <span id="total"></span></p>
+          <button id="boton-comprar" class="btn btn-light">Comprar</button>
+          <button id="boton-vaciar" class="btn btn-light">Vaciar carrito</button>
+        </div>
+
+      </div>
     </main>
-  
+
+       
+    
+    
     <!--Pie de página-->
     <footer class="bg-light">
       <a href="https://www.instagram.com/ciudadtrelew/" a target="_blank" class="ig"><img src="../Logos/Instagram.png" alt="Instagram" class="ig"></a>
@@ -78,6 +91,9 @@
     
     <!--Script Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+    <!--Script-->
+     <!--Script-->
+     <script src="../JS/ciclos.js"></script>
 </body>
 
 </html>
