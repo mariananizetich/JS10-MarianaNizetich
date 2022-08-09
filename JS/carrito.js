@@ -20,6 +20,7 @@ function addToCartClicked(event) {
 
   addItemToShoppingCart(itemTitle, itemPrice, itemImage);
   
+  
 }
 
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
@@ -77,7 +78,7 @@ function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   updateShoppingCartTotal();
 }
 
-function updateShoppingCartTotal() {
+function updateShoppingCartTotal(e) {
   let total = 0;
   const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
 
@@ -99,22 +100,37 @@ function updateShoppingCartTotal() {
     total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
   });
   shoppingCartTotal.innerHTML = ` $ ${total.toFixed(2)} `;
+  
 }
 
 function removeShoppingCartItem(event) {
   const buttonClicked = event.target;
   buttonClicked.closest('.shoppingCartItem').remove();
   updateShoppingCartTotal();
+  guardarEnLocalStorage()
 }
+
 
 function quantityChanged(event) {
   const input = event.target;
   input.value <= 0 ? (input.value = 1) : null;
   updateShoppingCartTotal();
+  guardarEnLocalStorage()
 }
 
 function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = '';
   updateShoppingCartTotal();
+  guardarEnLocalStorage()
 }
 
+
+function guardarCarritoEnLocalStorage () {
+  localStorage.setItem('carrito', JSON.stringify(shoppingCartContent));
+}
+
+function cargarCarritoDeLocalStorage () {
+  if (localStorage.getItem('carrito') !== null) {
+      carrito = JSON.parse(localStorage.getItem('shoppingCartContent'));
+  }
+}

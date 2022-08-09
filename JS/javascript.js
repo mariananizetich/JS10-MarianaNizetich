@@ -7,15 +7,15 @@ formulario.addEventListener("submit", validarEnvio)
 function validarEnvio(e){
     if (email.value ==0){
         e.preventDefault ();
-        console.log ("El campo Email es obligatorio.")
+        document.getElementById("resultado").innerHTML = "El campo Email es obligatorio."
     }
     else if (consulta.value ==0){
         e.preventDefault ();
-        console.log ("El campo Consulta es obligatorio.")
+        document.getElementById("resultado").innerHTML = "El campo Consulta es obligatorio."
     }
     else {
     
-    console.log("Tu consulta ha sido enviada con éxito.")
+      document.getElementById("resultado").innerHTML = "Tu consulta ha sido enviada con éxito. En breve nos pondemos en contacto con vos."
 
 }
         
