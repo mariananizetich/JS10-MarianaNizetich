@@ -55,117 +55,115 @@
     </header>
 
     <!--Contenido-->
+
     <main class="p-4 container">
+      <div class="row">
+        <div class="col-sm 12 col-md-12 p-5">
+          <h2 class="titulo">Visitar Trelew | Excursiones en Península Valdés</h2>
+          <p><strong>Te ofrecemos las mejores excursiones en tu visita a nuestra ciudad:</strong></p>
+        </div>
 
-      
-      <div class="container">
-        <h2 class="titulo">Visitar Trelew | Excursiones en Península Valdés</h2>
-          <div class="items">
-            
-            <div class="row">
-    
-              <div class="col-12 col-md-6">
-                <div class="item shadow mb-4">
-                  <h3 class="item-title">Avistaje de Ballenas</h3>
-                  <img class="item-image" src="../multimedia/Avistaje.png" width="250px">
-    
-                  <div class="item-details">
-                    <h4 class="item-price">$10500</h4>
-                    <button class="item-button btn addToCart">Comprar</button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="item shadow mb-4">
-                  <h3 class="item-title">Snorkel con lobos marinos</h3>
-    
-                  <img class="item-image" src="../multimedia/snorkeling.png" width="250px">
-    
-                  <div class="item-details">
-                    <h4 class="item-price">$9000</h4>
-                    <button class="item-button btn addToCart">Comprar</button>
-                  </div>
-                </div>
-              </div>
+<!--Productos-->
+        <div class="col-12 col-md-6">
+          <div class="item shadow mb-4">
+            <h3 class="item-title">Avistaje de Ballenas</h3>
+            <img class="item-image" src="../multimedia/Avistaje.png" width="250px">
+
+            <div class="item-details">
+              <h4 class="item-price">$10500</h4>
+              <button class="item-button btn addToCart">Comprar</button>
             </div>
-    
-        </section>
-        <section class="shopping-cart">
-          <div class="container">
-            <h3 class="text-center">CARRITO</h3>
-            <hr>
-            <div class="row">
-              <div class="col-6">
-                <div class="shopping-cart-header">
-                  <h6>Excursión</h6>
-                </div>
-              </div>
-              <div class="col-2">
-                <div class="shopping-cart-header">
-                  <h6 class="text-truncate">Precio</h6>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="shopping-cart-header">
-                  <h6>Cantidad</h6>
-                </div>
-              </div>
-            </div>
-            <div class="shopping-cart-items shoppingCartItemsContainer">
-            </div>
-            <div class="row">
-              <div class="col-12">
-                  <div class="shopping-cart-total d-flex align-items-center">
-                      <p class="mb-0">Total</p>
-                      <p class="ml-4 mb-0 p-2 shoppingCartTotal">$0</p>
-                      <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
-                          data-delay="2000">
-                          <div class="toast-header">
-                              <span>✅</span>
-                              <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
-                              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                              </button>
-                          </div>
-                          <div class="toast-body text-white">
-                              Excursión añadida.
-                          </div>
-                      </div>
-                      <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
-                          data-target="#comprarModal">Comprar</button>
-                  </div>
-              </div>
           </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="item shadow mb-4">
+            <h3 class="item-title">Snorkel con lobos marinos</h3>
 
+            <img class="item-image" src="../multimedia/snorkeling.png" width="250px">
 
+            <div class="item-details">
+              <h4 class="item-price">$9000</h4>
+              <button class="item-button btn addToCart">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <!--Carrito-->
+  </section>
+  <section class="shopping-cart">
+    <div class="container">
+      <h3 class="text-center">CARRITO</h3>
+      <hr>
+      <div class="row">
+        <div class="col-6">
+          <div class="shopping-cart-header">
+            <h6>Excursión</h6>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="shopping-cart-header">
+            <h6 class="text-truncate">Precio</h6>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="shopping-cart-header">
+            <h6>Cantidad</h6>
+          </div>
+        </div>
+      </div>
+      <div class="shopping-cart-items shoppingCartItemsContainer">
+      </div>
+      <div class="row">
+        <div class="col-12">
+            <div class=" d-flex align-items-center">
+                <p class="mb-0">Total</p>
+                <p class="ml-4 mb-0 p-2 shoppingCartTotal">$0</p>
+                <div class="toast ml-auto bg-info" role="alert" aria-live="assertive" aria-atomic="true"
+                    data-delay="2000">
+                    <div class="toast-header">
+                        <span>✅</span>
+                        <strong class="mr-auto ml-1 text-secondary">Elemento en el carrito</strong>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="toast-body text-white">
+                        Se aumentó correctamente la cantidad
+                    </div>
+                </div>
+                <button class="btn btn-success ml-auto comprarButton" type="button" data-toggle="modal"
+                    data-target="#comprarModal">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+
+      <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="comprarModalLabel">Tu compra fue realizada con éxito.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Muchas gracias!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
           
-            <div class="modal fade" id="comprarModal" tabindex="-1" aria-labelledby="comprarModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="comprarModalLabel">Tu compra fue realizada con éxito.</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Muchas gracias!</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-        </section>
-    </main>
-
-       
-    
-    
-    <!--Pie de página-->
+    <!--Footer-->
     <footer class="bg-light">
       <a href="https://www.instagram.com/ciudadtrelew/" a target="_blank" class="ig"><img src="../Logos/Instagram.png" alt="Instagram" class="ig"></a>
       
