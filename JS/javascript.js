@@ -1,3 +1,7 @@
+
+
+//Formulario
+
 let formulario = document.getElementById("formulario")
 let email = document.getElementById("mail")
 formulario.addEventListener("submit", validarEnvio)
@@ -20,6 +24,4 @@ function validarEnvio(e){
 }
         
 }
- 
-
 
