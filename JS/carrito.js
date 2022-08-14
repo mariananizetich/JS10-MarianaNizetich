@@ -14,14 +14,27 @@
           id: 1,
           nombre: "Avistaje de ballenas",
           precio: 10500,
-          capacidad: 10
+          duracion: 2
       },
       {
           id: 2,
           nombre: "Snorkel con lobos marinos",
           precio: 9000,
-          capacidad: 10
-      },  
+          duracion: 1.30
+      }, 
+      {
+        id: 3,
+        nombre: "Punta Tombo",
+        precio: 9500,
+        duracion: 3
+
+      },
+      {
+        id: 4,
+        nombre: "Avistaje de delfines",
+        precio: 10000,
+        duracion: 3
+      }
       
   ]
   function renderizarProductos() {
@@ -41,13 +54,12 @@
           miNodoPrecio.classList.add('item-price', "p-2");
           miNodoPrecio.innerText = `$${info.precio}`;
           
-          const miNodoStock = document.createElement('p');
-          miNodoStock.classList.add('item-details', "p-2");
-          miNodoStock.innerText = `Capacidad: ${info.capacidad}`;
           
-          const miNodoImagen = document.createElement('img')
-          miNodoImagen.classList.add('imagen')
-          miNodoImagen.setAttribute('src', info.img)
+
+          const miNodoDuracion =document.createElement("p");
+          miNodoDuracion.classList.add('item-details', "p-2");
+          miNodoDuracion.innerText = `Duración: ${info.duracion} hs.`;
+
 
           
           const miNodoBoton = document.createElement('button');
@@ -55,10 +67,13 @@
           miNodoBoton.innerText = '+';
           miNodoBoton.setAttribute('marcador', info.id);
           miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
+
+          
           
           miNodoCardBody.append(miNodoTitle);
           miNodoCardBody.append(miNodoPrecio);
-          miNodoCardBody.append(miNodoStock);
+          
+          miNodoCardBody.append(miNodoDuracion);
           //miNodoCardBody.append(miNodoImagen)
           miNodoCardBody.append(miNodoBoton);
           miNodo.append(miNodoCardBody);
@@ -67,7 +82,6 @@
   }
 
    function anyadirProductoAlCarrito(e) {
-    e.preventDefault()
       carrito.push(e.target.getAttribute('marcador'))
       renderizarCarrito();
       guardarCarritoEnLocalStorage();
@@ -92,10 +106,9 @@
           const miNodo = document.createElement('div');
           miNodo.classList.add('align-items-center', 'text-right', 'mx-2');
           miNodo.innerText = `${numeroUnidadesItem} x ${miItem[0].nombre} - $${miItem[0].precio}`;
-          // Boton de borrar
           const miBoton = document.createElement('button');
-          miBoton.classList.add('btn', 'btn-light', 'mx-5');
-          miBoton.innerText = 'Vaciar';
+          miBoton.classList.add('btn', 'btn-danger', 'mx-2');
+          miBoton.innerText = 'X';
           miBoton.style.marginLeft = '1rem';
           miBoton.dataset.item = item;
           miBoton.addEventListener('click', borrarItemCarrito);
@@ -108,7 +121,7 @@
 
   
   function borrarItemCarrito(e) {
-      e.preventDefault()
+      
       const id = e.target.dataset.item;
       
       carrito = carrito.filter((carritoId) => {
@@ -120,6 +133,8 @@
       guardarCarritoEnLocalStorage();
 
   }
+
+  
 
   
   function calcularTotal() {
@@ -145,24 +160,30 @@
 
   }
 
-  function guardarCarritoEnLocalStorage () {
-      localStorage.setItem('carrito', JSON.stringify(carrito));
+  function guardarCarritoEnLocalStorage (){
+    localStorage.setItem("carrito", JSON.stringify(carrito))
   }
 
-  function cargarCarritoDeLocalStorage () {
-      
-      if (localStorage.getItem('carrito') !== null) {
-         
-          carrito = JSON.parse(localStorage.getItem('carrito'));
-      }
+  function cargarCarritoDeLocalStorage(){
+    if (localStorage.getItem("carrito") !== null){
+        carrito = JSON.parse(localStorage.getItem("carrito"))
+    }
   }
-
+  
+  obtenerProductosLocalStorage(){
+    //Comprobar si hay algo en LS
+    if(localStorage.getItem('carrito') === null){
+        carrito = [];
+    }
+    else {
+        carrito = JSON.parse(localStorage.getItem('carrito'));
+    }
+    return carrito;
+}
   
 
   function procesarCompra(e){
-    if (carrito == []){
-      document.getElementById("compra").innerHTML = "Tu carrito está vacío."
-    }
+   
     e.preventDefault()
     location.href = "compra.html"
 
