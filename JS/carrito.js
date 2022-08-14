@@ -13,18 +13,21 @@
       {
           id: 1,
           nombre: "Avistaje de ballenas",
+          img: "Avistaje.jpg",
           precio: 10500,
           duracion: 2
       },
       {
           id: 2,
           nombre: "Snorkel con lobos marinos",
+          img: "snorkeling.jpg",
           precio: 9000,
           duracion: 1.30
       }, 
       {
         id: 3,
         nombre: "Punta Tombo",
+        img: "tombo.jpg",
         precio: 9500,
         duracion: 3
 
@@ -32,6 +35,7 @@
       {
         id: 4,
         nombre: "Avistaje de delfines",
+        img: "delfines.jpg",
         precio: 10000,
         duracion: 3
       }
@@ -49,12 +53,17 @@
           const miNodoTitle = document.createElement('h5');
           miNodoTitle.classList.add('item-title', "p-2");
           miNodoTitle.innerText = info.nombre;
-          
+
+          const miNodoImagen = document.createElement("img");
+          miNodoImagen.classList.add("item-image");
+          miNodoImagen.setAttribute("src", info.img);
+
+
+          // No me toma las imágenes, las tengo en la misma carpeta, qué estoy haciendo mal?
+
           const miNodoPrecio = document.createElement('p');
           miNodoPrecio.classList.add('item-price', "p-2");
           miNodoPrecio.innerText = `$${info.precio}`;
-          
-          
 
           const miNodoDuracion =document.createElement("p");
           miNodoDuracion.classList.add('item-details', "p-2");
@@ -72,9 +81,8 @@
           
           miNodoCardBody.append(miNodoTitle);
           miNodoCardBody.append(miNodoPrecio);
-          
           miNodoCardBody.append(miNodoDuracion);
-          //miNodoCardBody.append(miNodoImagen)
+          miNodoCardBody.append(miNodoImagen);
           miNodoCardBody.append(miNodoBoton);
           miNodo.append(miNodoCardBody);
           DOMitems.append(miNodo);
@@ -170,22 +178,14 @@
     }
   }
   
-  obtenerProductosLocalStorage(){
-    //Comprobar si hay algo en LS
-    if(localStorage.getItem('carrito') === null){
-        carrito = [];
-    }
-    else {
-        carrito = JSON.parse(localStorage.getItem('carrito'));
-    }
-    return carrito;
-}
+  
   
 
   function procesarCompra(e){
    
     e.preventDefault()
     location.href = "compra.html"
+
 
   }
 
