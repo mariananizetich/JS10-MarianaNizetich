@@ -55,6 +55,7 @@
     </header>
 
     <!--Contenido-->
+     <!--Está en proceso-->
 
   
 <!--Título e intro-->
@@ -62,28 +63,39 @@
   <div class="row">
     <div class="col-sm 12 col-md-12 p-5">
       <h2 class="titulo">Visitar Trelew | Finalizar compra</h2>
-      <p><strong>Últimos pasos para finalizar tu compra!</strong></p>
+      <p><strong>¡Últimos pasos para finalizar tu compra!</strong></p>
     </div>
-    <div class="formularioCompra">
+
+  <!--Formulario-->
     <div>
-      <div class="form-group row">
-        <label for="name">Nombre completo:</label>
-        <div>
-            <input type="text" id="cliente" name="destinatario">
+
+      <form action="" class="row g-3" id="formCompra">
+        <div class="col-md-4">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="name" id="nombre" name="name">
         </div>
-    </div>
-    <div class="form-group row mt-3">
-        <label for="email">Email:</label>
-        <div>
-            <input type="text" id="correo" name="cc_to">
+        <div class="col-md-4">
+          <label for="lastname" class="form-label">Apellido</label>
+          <input type="lastname" id="apellido" name="apellido">
         </div>
-    </div>
-    <div class="p-3">
-      <input type="submit" value="Enviar" id="boton">
-    </div>
-  </form>
-</div>
-<div class="procesarPedido col-sm-12 col-md-6 p-5">
+        <div class="col-md-4">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="col-md-4">
+          <input type="submit" value="Enviar" id="enviar">
+        </div>
+      </form>
+      
+      <div id="feedback" class="p-3">
+
+      </div>
+
+  </div>
+      
+<!--Finalizar compra-->
+
+  <div class="procesarPedido col-sm-12 col-md-6 p-5">
   <h3>TU PEDIDO</h3>
   <div id="carrito" class="list-group"></div>
   <table class="table p-5">
@@ -104,15 +116,13 @@
 </div>
 <div class="row mx-4">
   <div class="col">
-    <h3 class="text-dark" id="totalCompra">Total: 0</h3>
+    <h4 class="text-dark" id="totalCompra">Total: $ 0</h4>
   </div>
   <div class="col d-flex justify-content-end">
     <button class="btn btn-success">Comprar</button>
   </div>
 </div>
 </div>
-
-<!--Está en proceso-->
  
 </main>
 
@@ -130,7 +140,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
     
     <!--Script-->
-     <script src="../JS/carrito.js"></script>
+     <script src="../JS/compra.js"></script>
 </body>
 
 </html>

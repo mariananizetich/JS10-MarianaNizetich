@@ -13,21 +13,21 @@
       {
           id: 1,
           nombre: "Avistaje de ballenas",
-          img: "Avistaje.jpg",
+          img: "Avistaje.png",
           precio: 10500,
           duracion: 2
       },
       {
           id: 2,
           nombre: "Snorkel con lobos marinos",
-          img: "snorkeling.jpg",
+          img: "snorkeling.png",
           precio: 9000,
           duracion: 1.30
       }, 
       {
         id: 3,
         nombre: "Punta Tombo",
-        img: "tombo.jpg",
+        img: "tombo.png",
         precio: 9500,
         duracion: 3
 
@@ -35,7 +35,7 @@
       {
         id: 4,
         nombre: "Avistaje de delfines",
-        img: "delfines.jpg",
+        img: "delfines.png",
         precio: 10000,
         duracion: 3
       }
@@ -199,3 +199,37 @@
   renderizarCarrito();
 
 
+
+  // Formulario compra
+
+
+
+
+
+  let formCompra = document.getElementById("formCompra")
+  let nombre = document.getElementById("nombre")
+  let apellido = document.getElementById ("apellido")
+  let email = document.getElementById("email")
+  formCompra.addEventListener("submit", validar)
+
+  function validar(e){
+    e.preventDefault();
+
+  if (nombre.value==0){
+    e.preventDefault ();
+    document.document.querySelector("#feedback1").innerHTML = "El campo Nombre es obligatorio."
+  }
+  else if (apellido.value == 0){
+    e.preventDefault();
+    document.document.querySelector("#feedback2").innerHTML = "El campo Apellido es obligatorio."
+  }
+  else if (email.value ==0){
+    e.preventDefault();
+    document.document.querySelector("#feedback3").innerHTML = "El campo Email es obligatorio."
+  }
+  else {
+    e.preventDefault();
+    Document.querySelector("#feedback4").innerHTML = "Tus datos fueron completados correctamente. ¡Podés proceder con la compra!"
+  }
+
+  }
