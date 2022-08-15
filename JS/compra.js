@@ -1,4 +1,7 @@
-// Está en proceso
+
+// Está en proceso!!
+
+//Formulario
 
 let formularioCompra = document.getElementById("formCompra")
 let nombre = document.getElementById("nombre")
@@ -28,6 +31,9 @@ function validarDatos(e){
 
 }
         
-
 }
+
+// Finalizar compra
+
+
 

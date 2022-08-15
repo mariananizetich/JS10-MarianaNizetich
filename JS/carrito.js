@@ -39,8 +39,8 @@
         precio: 10000,
         duracion: 3
       }
-      
   ]
+
   function renderizarProductos() {
       listaDeProductos.forEach((info) => {
           
@@ -95,6 +95,7 @@
       guardarCarritoEnLocalStorage();
   }
 
+  
   
   function renderizarCarrito() {
       DOMcarrito.innerText = '';
@@ -185,8 +186,6 @@
    
     e.preventDefault()
     location.href = "compra.html"
-
-
   }
 
   
@@ -200,36 +199,5 @@
 
 
 
-  // Formulario compra
 
 
-
-
-
-  let formCompra = document.getElementById("formCompra")
-  let nombre = document.getElementById("nombre")
-  let apellido = document.getElementById ("apellido")
-  let email = document.getElementById("email")
-  formCompra.addEventListener("submit", validar)
-
-  function validar(e){
-    e.preventDefault();
-
-  if (nombre.value==0){
-    e.preventDefault ();
-    document.document.querySelector("#feedback1").innerHTML = "El campo Nombre es obligatorio."
-  }
-  else if (apellido.value == 0){
-    e.preventDefault();
-    document.document.querySelector("#feedback2").innerHTML = "El campo Apellido es obligatorio."
-  }
-  else if (email.value ==0){
-    e.preventDefault();
-    document.document.querySelector("#feedback3").innerHTML = "El campo Email es obligatorio."
-  }
-  else {
-    e.preventDefault();
-    Document.querySelector("#feedback4").innerHTML = "Tus datos fueron completados correctamente. ¡Podés proceder con la compra!"
-  }
-
-  }
