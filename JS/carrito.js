@@ -59,7 +59,7 @@
           miNodoImagen.setAttribute("src", info.img);
 
 
-          // No me toma las imágenes, las tengo en la misma carpeta, qué estoy haciendo mal?
+          // No me toma las imágenes, las tengo en la misma carpeta, qué estoy haciendo mal? 
 
           const miNodoPrecio = document.createElement('p');
           miNodoPrecio.classList.add('item-price', "p-2");
