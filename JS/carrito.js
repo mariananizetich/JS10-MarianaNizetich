@@ -96,7 +96,6 @@
   }
 
   
-  
   function renderizarCarrito() {
       DOMcarrito.innerText = '';
       const carritoSinDuplicados = [...new Set(carrito)];
