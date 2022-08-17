@@ -27,5 +27,4 @@ function validarEnvio(e){
 
 
 
-
 formulario.addEventListener("submit", validarEnvio)
