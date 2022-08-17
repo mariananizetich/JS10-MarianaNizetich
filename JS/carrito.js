@@ -13,21 +13,21 @@
       {
           id: 1,
           nombre: "Avistaje de ballenas",
-          img: "Avistaje.png",
+          img: "/JS/Avistaje.png",
           precio: 10500,
           duracion: 2
       },
       {
           id: 2,
           nombre: "Snorkel con lobos marinos",
-          img: "snorkeling.png",
+          img: "/JS/snorkeling.png",
           precio: 9000,
           duracion: 1.30
       }, 
       {
         id: 3,
         nombre: "Punta Tombo",
-        img: "tombo.png",
+        img: "/JS/tombo.png",
         precio: 9500,
         duracion: 3
 
@@ -35,7 +35,7 @@
       {
         id: 4,
         nombre: "Avistaje de delfines",
-        img: "delfines.png",
+        img: "/JS/delfines.png",
         precio: 10000,
         duracion: 3
       }
@@ -45,7 +45,7 @@
       listaDeProductos.forEach((info) => {
           
           const miNodo = document.createElement('div');
-          miNodo.classList.add("item", "shadow", "mb-4");
+          miNodo.classList.add("item", "shadow", "mb-4", "w-100");
           
           const miNodoCardBody = document.createElement('div');
           miNodoCardBody.classList.add('item-details');
@@ -55,11 +55,8 @@
           miNodoTitle.innerText = info.nombre;
 
           const miNodoImagen = document.createElement("img");
-          miNodoImagen.classList.add("item-image");
+          miNodoImagen.classList.add("item-image", "w-50", "p-2", "align-items-center");
           miNodoImagen.setAttribute("src", info.img);
-
-
-          // No me toma las imágenes, las tengo en la misma carpeta, qué estoy haciendo mal? 
 
           const miNodoPrecio = document.createElement('p');
           miNodoPrecio.classList.add('item-price', "p-2");
@@ -80,9 +77,9 @@
           
           
           miNodoCardBody.append(miNodoTitle);
+          miNodoCardBody.append(miNodoImagen);
           miNodoCardBody.append(miNodoPrecio);
           miNodoCardBody.append(miNodoDuracion);
-          miNodoCardBody.append(miNodoImagen);
           miNodoCardBody.append(miNodoBoton);
           miNodo.append(miNodoCardBody);
           DOMitems.append(miNodo);
@@ -191,7 +188,10 @@
   function procesarCompra(e){
    
     e.preventDefault()
+   
     location.href = "compra.html"
+
+    
   }
 
   
