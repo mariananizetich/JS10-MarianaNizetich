@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:ital,wght@0,400;1,500&display=swap" rel="stylesheet">
     <!--Logo-->
     <link rel="shortcut icon" href="../multimedia/Escudo Trelew (1).png">
-    <title>Visitar Trelew | Excursiones</title>
+    <title>Visitar Trelew | Finalizar compra</title>
 </head>
 <body>
         
@@ -55,29 +55,75 @@
     </header>
 
     <!--Contenido-->
+     <!--Está en proceso-->
 
   
 <!--Título e intro-->
 <main class="p-4">
   <div class="row">
     <div class="col-sm 12 col-md-12 p-5">
-      <h2 class="titulo">Visitar Trelew | Excursiones en Península Valdés</h2>
-      <p><strong>Te ofrecemos las mejores excursiones en tu visita a nuestra ciudad:</strong></p>
+      <h2 class="titulo">Visitar Trelew | Finalizar compra</h2>
+      <p><strong>¡Últimos pasos para finalizar tu compra!</strong></p>
     </div>
-    <div class="col-sm-12 col-md-6 p-5" id="items">
 
-    </div>
-    <!--Aside-->
-    <div class="col-sm-12 col-md-6 p-5">
-      <h2 class="titulo">CARRITO</h2>
-      <div id="carrito" class="list-group"></div>
-      <hr>
-      <p class="text-right">Total de tu compra: <span id="total"></span></p>
-      <button id="boton-comprar" class="btn btn-light">Comprar</button>
-      <button id="boton-vaciar" class="btn btn-light">Vaciar carrito</button>
-    </div>
+  <!--Formulario-->
+    <div>
+
+      <form action="" class="row g-3" id="formCompra">
+        <div class="col-md-4">
+          <label for="name" class="form-label">Nombre</label>
+          <input type="name" id="nombre" name="name">
+        </div>
+        <div class="col-md-4">
+          <label for="lastname" class="form-label">Apellido</label>
+          <input type="lastname" id="apellido" name="apellido">
+        </div>
+        <div class="col-md-4">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="col-md-4">
+          <input type="submit" value="Enviar" id="enviar">
+        </div>
+      </form>
+
+      <div id="feedback" class="p-3">
+
+      </div>
 
   </div>
+      
+<!--Finalizar compra-->
+
+  <div class="procesarPedido col-sm-12 col-md-6 p-5">
+  <h3>TU PEDIDO</h3>
+  <div id="carrito" class="list-group"></div>
+  <table class="table p-5">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+
+    </tbody>
+  </table>
+
+</div>
+<div class="row mx-4">
+  <div class="col">
+    <h4 class="text-dark" id="totalCompra">Total: $ 0</h4>
+  </div>
+  <div class="col d-flex justify-content-end">
+    <button class="btn btn-success">Comprar</button>
+  </div>
+</div>
+</div>
+ 
 </main>
 
           
@@ -94,7 +140,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
     
     <!--Script-->
-     <script src="../JS/carrito.js"></script>
+     <script src="../JS/compra.js"></script>
 </body>
 
 </html>
