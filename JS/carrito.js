@@ -45,7 +45,7 @@
       listaDeProductos.forEach((info) => {
           
           const miNodo = document.createElement('div');
-          miNodo.classList.add("item", "shadow", "mb-4", "w-100");
+          miNodo.classList.add("item", "shadow", "mb-4");
           
           const miNodoCardBody = document.createElement('div');
           miNodoCardBody.classList.add('item-details');
