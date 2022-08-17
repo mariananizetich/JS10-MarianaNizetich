@@ -91,6 +91,11 @@
 
    function anyadirProductoAlCarrito(e) {
       carrito.push(e.target.getAttribute('marcador'))
+      Swal.fire(
+        '¡Bien!',
+        'Producto agregado al carrito',
+        'success'
+      )
       renderizarCarrito();
       guardarCarritoEnLocalStorage();
   }
@@ -135,6 +140,8 @@
       carrito = carrito.filter((carritoId) => {
           return carritoId !== id;
       });
+
+      
       
       renderizarCarrito();
      
