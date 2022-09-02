@@ -264,3 +264,4 @@ function cargarCarritoDeLocalStorage () {
 }
 
 cargarCarritoDeLocalStorage()
+actualizarCarrito()
