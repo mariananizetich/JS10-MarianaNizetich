@@ -1,5 +1,6 @@
 
-  {
+  "ListaProductos": [
+    {
     "id": 1,
     "nombre": "Avistaje de ballenas",
     "img": "../JS/Avistaje.png",
@@ -31,4 +32,4 @@
     "duracion": 3,
     "cantidad": 1
   }
-
+]
