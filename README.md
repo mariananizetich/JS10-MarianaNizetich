@@ -5,6 +5,7 @@ Sitio web creado por Mariana Nizetich para el curso de desarrollo web de Coderho
 - Qué hacer en Trelew
 - Hoteles
 - Destinos cercanos
+- Excursiones Península Valdés
 - Contacto
 
 Este proyecto fue desarrollado con HTML para la estructura del sitio; Sass para los estilos; Bootstrap para el framework; librería animate.css para las animaciones; Javascript para dar interactividad y dinamismo; y Nodejs para compilar Sass con Css. 
