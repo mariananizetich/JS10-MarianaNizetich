@@ -7,4 +7,4 @@ Sitio web creado por Mariana Nizetich para el curso de desarrollo web de Coderho
 - Destinos cercanos
 - Contacto
 
-Este proyecto fue desarrollado con HTML para la estructura del sitio; Sass para los estilos; Bootstrap para el framework; librería animate.css para las animaciones; y Nodejs para compilar Sass con Css. 
+Este proyecto fue desarrollado con HTML para la estructura del sitio; Sass para los estilos; Bootstrap para el framework; librería animate.css para las animaciones; Javascript para dar interactividad y dinamismo; y Nodejs para compilar Sass con Css. 
