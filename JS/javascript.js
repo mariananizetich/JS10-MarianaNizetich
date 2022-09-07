@@ -1,31 +1,8 @@
 
-
 let formulario = document.getElementById("formulario")
 let email = document.getElementById("mail")
 let consulta = document.getElementById("consulta")
 
-
-const pokemonContainer = document.getElementById("pokemon-container")
-
-function traerPokemon(){
-    fetch("https://pokeapi.co/api/v2/pokemon/pikachu/")
-    .then((res) => res.json())
-    .then((data)=>{
-        mostrarPokemon(data)
-    })
-}
-
-
-function mostrarPokemon(pokemon){
-const img = document.createElement("img");
-img.src = pokemon.sprites.front_default;
-
-
-const div = document.createElement("div");
-div.appendChild(img);
-
-pokemonContainer.appendChild(div)
-}
 
 function validarEnvio(e){
       e.preventDefault ();
@@ -34,7 +11,7 @@ function validarEnvio(e){
               icon: 'error',
               title: '¡Ups!',
               text: 'Los campos Email y Consulta son obligatorios.',}) ) 
-              : traerPokemon()
+              : 
               (Swal.fire({
               icon: 'success',
               title: '¡Listo!',
@@ -42,4 +19,34 @@ function validarEnvio(e){
               )
               
         }
+
 formulario.addEventListener("submit", validarEnvio)
+
+
+
+
+//Fetch
+
+let url = "https://jsonplaceholder.typicode.com/users"
+fetch(url)
+.then(response => response.json())
+.then(data => mostrarData(data))
+
+const mostrarData = (data) => {
+      console.log(data) // muestro datos por consola porque no los voy a usar.
+      
+      for(let i = 0; i < data.length; i++){
+            let body = document.getElementById("data")
+            body  = `
+            <td>${data[i].id}</td>
+            <td>${data[i].name}</td>
+            <td>${data[i].email}</td>`
+      }
+      
+}
+
+
+
+
+
+
