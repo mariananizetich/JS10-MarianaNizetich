@@ -1,4 +1,5 @@
  let carrito = []
+ let total = 0
 
   const listaProductos = [
     {
@@ -47,6 +48,7 @@
 
   botonVaciar.addEventListener("click", ()=>{
     carrito.length = 0
+    precioTotal.innerHTML = 0
     localStorage.removeItem('carrito')
     actualizarCarrito()
   })
@@ -74,7 +76,8 @@
     if (existe){
         const prod = carrito.map (prod =>{
             if (prod.id === prodId){
-                prod.cantidad++
+                prod.cantidad++ 
+              
             }
             guardarCarritoEnLocalStorage(carrito)
         })
@@ -91,10 +94,12 @@ const eliminarDelCarrito = (prodId) =>{
     const item = carrito.find((prod)=> prod.id === prodId)
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
+    precioTotal.innerHTML = 0
     actualizarCarrito()
     guardarCarritoEnLocalStorage(carrito)
     
 }
+
 
 
 const actualizarCarrito = () =>{
@@ -108,11 +113,15 @@ const actualizarCarrito = () =>{
         <p>Cantidad: <span>${prod.cantidad}</span></p>
         <button class="btn btn-light m-3"  onclick="eliminarDelCarrito(${prod.id})"> <i class="fa-solid fa-trash"></i></button>`
 
-        precioTotal.innerText = carrito.reduce((acc, prod)=> acc + prod.precio, 0)
+
+
+       precioTotal.innerText = carrito.reduce((acc, prod)=> acc + prod.precio, 0)
 
         contenedorCarrito.appendChild(lista)
     })
 }
+
+
 
 function guardarCarritoEnLocalStorage () {
     localStorage.setItem('carrito', JSON.stringify(carrito));
