@@ -122,7 +122,6 @@ const actualizarCarrito = () =>{
 }
 
 
-
 function guardarCarritoEnLocalStorage () {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
@@ -143,11 +142,18 @@ actualizarCarrito()
 const botonCompra = document.getElementById("botonConfirmar")
 
 botonComprar.addEventListener("click", (e)=>{
-    
+    if (carrito.length==0){
+        Swal.fire({
+            icon: 'error',
+            title: '¡Ups!',
+            text: 'El carrito está vacío.',})
+    } else{
         e.preventDefault()   
         Swal.fire({
             title: '¡Ya casi!',
             text: 'Dejanos tus datos para poder confirmar tu compra.',})
+    }
+        
        
 })
 
