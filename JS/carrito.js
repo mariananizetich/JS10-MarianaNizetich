@@ -1,5 +1,5 @@
  let carrito = []
- let total = 0
+ 
 
   const listaProductos = [
     {
@@ -43,7 +43,7 @@
   const botonVaciar = document.getElementById("boton-vaciar")
   const precioTotal = document.getElementById("total")
   const botonComprar = document.getElementById("boton-comprar")
-
+  
   
 
   botonVaciar.addEventListener("click", ()=>{
@@ -70,6 +70,8 @@
 
 
     });
+
+
     
   const agregarAlCarrito = (prodId) =>{
     const existe = carrito.some(prod => prod.id === prodId)
@@ -77,7 +79,6 @@
         const prod = carrito.map (prod =>{
             if (prod.id === prodId){
                 prod.cantidad++ 
-              
             }
             guardarCarritoEnLocalStorage(carrito)
         })
@@ -86,6 +87,7 @@
         const item = listaProductos.find((prod) => prod.id === prodId)
         carrito.push(item)
     }
+    
     guardarCarritoEnLocalStorage(carrito)
     actualizarCarrito()
 }
@@ -114,12 +116,16 @@ const actualizarCarrito = () =>{
         <button class="btn btn-light m-3"  onclick="eliminarDelCarrito(${prod.id})"> <i class="fa-solid fa-trash"></i></button>`
 
 
+    
+        precioTotal.innerHTML = carrito.reduce((acc, prod)=> acc + prod.precio*prod.cantidad, 0)
 
-       precioTotal.innerText = carrito.reduce((acc, prod)=> acc + prod.precio, 0)
+      
 
         contenedorCarrito.appendChild(lista)
     })
 }
+
+
 
 
 function guardarCarritoEnLocalStorage () {
